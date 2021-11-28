@@ -9,12 +9,13 @@ def clear():
 
 
 with open("heli_animation.txt", encoding="utf-8") as f:
-    helicopter_phases = itertools.cycle(list(filter(None, f.read().split("===================================="))))
+    helicopter_phases = itertools.cycle(
+        [i.strip("\n") for i in filter(None, f.read().split("===================================="))]
+    )
 
-i = 0
+
 while True:
-    print(i)
     print(next(helicopter_phases))
-    time.sleep(0.25)
+    print()
+    time.sleep(0.1)
     clear()
-    i += 1
