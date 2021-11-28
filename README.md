@@ -19,7 +19,7 @@ See [this page](https://wiki.projecttopics.org/982409-what-is-helicopter-helicop
 > On TikTok, the sound is famous as Helikopter by Fezlija.
 
 ### The creator
-> The singer behind the Helikoppter helipkopter meme is none other then Fazlija. He is a 49 year old mucison fomr Bosnia and herzegovinea.
+> The singer behind the Helikoppter helipkopter meme is none other then Fazlija. He is a 49 year old musician from Bosnia and herzegovinea.
 > The singer released the song back in 2015. After a few creators used the tune for their background music, the sound started getting the recognition it deserves.
 > It seems that the song has yet to have an English translation. According to Know your meme, the sone is about money and helicopter.
 > The youtube videos have about 2 million views.
