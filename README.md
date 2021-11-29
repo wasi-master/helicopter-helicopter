@@ -1,6 +1,6 @@
 # helicopter-helicopter
 
-Helicopter animation in terminal
+Helicopter animation in terminal (scroll down for instructions)
 
 ## Why does this exist?
 It's because of a meme
@@ -29,12 +29,23 @@ There are three versions of this song: [#1](https://youtu.be/neDWGg2mGqo "1st So
 
 </details>
 
-## Installation
+## Installation & Usage
 
-Either clone the repo or download it as zip by clicking [here](https://github.com/wasi-master/helicopter-helicopter/archive/refs/heads/main.zip)
+To install with pip run 
+```sh
+pip install helikopter```
+Then to see the helicopter run 
+```sh
+python -m helikopter```
+You can also specify an optional frame_length parameter
+```sh
+python -m helikopter 0.5```
+
+If you don't want to install with pip you can either clone the repo or download it as zip by clicking [here](https://github.com/wasi-master/helicopter-helicopter/archive/refs/heads/main.zip)
 If you downloaded the zip file then extract it to some folder
 If you cloned the repo then go to the folder named `helicopter-helicopter`
 Then run `heli.py`.
+
 To exit press <kbd>Ctrl+C</kbd>
 
 ## Demo

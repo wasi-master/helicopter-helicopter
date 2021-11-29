@@ -8,17 +8,22 @@ The heli_animation.txt file should be in the same folder as this file or else th
 Usage
 =====
 To run normally use
-    python heli.py
+    python -m helikopter
 To specify a custom frame duration use
-    python heli.py n
+    python -m helikopter n
 Where n is the duration such as 0.5:
-    python heli.py 0.5
+    python -m helikopter 0.5
 """
 import os
 import sys
 import itertools
 import time
+import pathlib
 
+# Get the current file path
+here = pathlib.Path(__file__).parent.resolve()
+# Get the helicopter animation file path
+heli_animation_filepath = (here / 'heli_animation.txt')
 
 def clear():
     """Clear the terminal"""
@@ -26,7 +31,7 @@ def clear():
     os.system("cls" if os.name == "nt" else "clear")
 
 
-with open("heli_animation.txt", encoding="utf-8") as f:
+with open(heli_animation_filepath, encoding="utf-8") as f:
     # `itertools.cycle` creates a infinite iterable so the animation never stops
     # `i.strip("\n")` is there to remove trailing newlines
     # `filter(None, sequence)` removes all falsey elements such as empty strings
