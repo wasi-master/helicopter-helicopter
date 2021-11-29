@@ -53,4 +53,4 @@ To exit press <kbd>Ctrl+C</kbd>
 
 ## Demo
 
-![helikopter-helikopter](helikopter-helikopter.gif)
+![🚁🚁 helikopter-helikopter 🚁🚁 sorry the demo could not be loaded](https://raw.githubusercontent.com/wasi-master/helicopter-helicopter/main/helikopter-helikopter.gif)
