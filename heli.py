@@ -14,9 +14,9 @@ To specify a custom frame duration use
 Where n is the duration such as 0.5:
     python heli.py 0.5
 """
+from itertools import cycle
 from os import name, system
 from sys import argv
-from itertools import cycle
 from time import sleep
 
 # `cls` is a Windows command and `clear` is a Unix command to clear the terminal
