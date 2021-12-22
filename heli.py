@@ -15,7 +15,8 @@ Where n is the duration such as 0.5:
     python heli.py 0.5
 """
 from itertools import cycle
-from os import name, system
+from os import name
+from os import system
 from sys import argv
 from time import sleep
 
