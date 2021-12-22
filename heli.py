@@ -47,7 +47,7 @@ def print_heli():
             print()
             # I add a `time.sleep` to delay the frames or else it will be too fast
             # I check if there is a custom delay passed and if not, it uses 0.1
-            time.sleep(DELAY)
+            sleep(DELAY)
             # I clear the terminal after the run
             clear()
     except KeyboardInterrupt:
