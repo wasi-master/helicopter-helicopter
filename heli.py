@@ -40,6 +40,7 @@ with open("heli_animation.txt", encoding="utf-8") as f:
         [i.strip("\n") for i in filter(None, f.read().split(FRAME_SEPARATOR))]
     )
 
+
 def print_heli():
     try:
         for heli_frame in helicopter_phases:
@@ -52,6 +53,7 @@ def print_heli():
             clear()
     except KeyboardInterrupt:
         print("Stopped!")
+
 
 if __name__ == "__main__":
     print_heli()
