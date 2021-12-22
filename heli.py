@@ -38,8 +38,8 @@ with open("heli_animation.txt", encoding="utf-8") as f:
     # `filter(None, sequence)` removes all falsey elements such as empty strings
     # `f.read().split(...)` gets all the parts of the helicopter animation as a list
     helicopter_phases = cycle(
-        [i.strip("\n") for i in filter(None, f.read().split(FRAME_SEPARATOR))]
-    )
+        [i.strip("\n") for i in filter(None,
+                                       f.read().split(FRAME_SEPARATOR))])
 
 
 def print_heli():
