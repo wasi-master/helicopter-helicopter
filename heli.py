@@ -14,16 +14,19 @@ To specify a custom frame duration use
 Where n is the duration such as 0.5:
     python heli.py 0.5
 """
-import os
-import sys
 import itertools
-import time
+from os import name, system
+from sys import argv
+from time import sleep
+
+# `cls` is a Windows command and `clear` is a Unix command to clear the terminal
+CLEAR_COMMAND = "cls" if os.name == "nt" else "clear"
+DELAY = float(argv[1]) if argv[1:] else 0.1
 
 
 def clear():
     """Clear the terminal"""
-    # `cls` is a Windows command and `clear` is a Unix command to clear the terminal
-    os.system("cls" if os.name == "nt" else "clear")
+    system(CLEAR_COMMAND)
 
 
 with open("heli_animation.txt", encoding="utf-8") as f:
@@ -44,7 +47,7 @@ def print_heli():
             print()
             # I add a `time.sleep` to delay the frames or else it will be too fast
             # I check if there is a custom delay passed and if not, it uses 0.1
-            time.sleep(float(sys.argv[1]) if sys.argv[1:] else 0.1)
+            time.sleep(DELAY)
             # I clear the terminal after the run
             clear()
     except KeyboardInterrupt:
