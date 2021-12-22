@@ -20,7 +20,7 @@ from sys import argv
 from time import sleep
 
 # `cls` is a Windows command and `clear` is a Unix command to clear the terminal
-CLEAR_COMMAND = "cls" if os.name == "nt" else "clear"
+CLEAR_COMMAND = "cls" if name == "nt" else "clear"
 DELAY = float(argv[1]) if argv[1:] else 0.1
 
 
