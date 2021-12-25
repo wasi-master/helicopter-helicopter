@@ -14,16 +14,21 @@ To specify a custom frame duration use
 Where n is the duration such as 0.5:
     python heli.py 0.5
 """
-import os
-import sys
-import itertools
-import time
+from os import name, system
+from sys import argv
+from itertools import cycle
+from time import sleep
+
+# `cls` is a Windows command and `clear` is a Unix command to clear the terminal
+CLEAR_COMMAND = "cls" if name == "nt" else "clear"
+# Check if there is a custom delay passed and if not, use 0.1
+DELAY = float(argv[1]) if argv[1:] else 0.1
+FRAME_SEPARATOR = "===================================="
 
 
 def clear():
     """Clear the terminal"""
-    # `cls` is a Windows command and `clear` is a Unix command to clear the terminal
-    os.system("cls" if os.name == "nt" else "clear")
+    system(CLEAR_COMMAND)
 
 
 with open("heli_animation.txt", encoding="utf-8") as f:
@@ -31,24 +36,24 @@ with open("heli_animation.txt", encoding="utf-8") as f:
     # `i.strip("\n")` is there to remove trailing newlines
     # `filter(None, sequence)` removes all falsey elements such as empty strings
     # `f.read().split(...)` gets all the parts of the helicopter animation as a list
-    helicopter_phases = itertools.cycle(
-        [i.strip("\n") for i in filter(None, f.read().split("===================================="))]
+    helicopter_phases = cycle(
+        [i.strip("\n") for i in filter(None, f.read().split(FRAME_SEPARATOR))]
     )
+
 
 def print_heli():
     try:
         for heli_frame in helicopter_phases:
             print(heli_frame)
-            # Since the value of the end parameter for `print()` is by default a newline
-            # I can use a empty print without arguments to print only a newline
+            # print a newline
             print()
-            # I add a `time.sleep` to delay the frames or else it will be too fast
-            # I check if there is a custom delay passed and if not, it uses 0.1
-            time.sleep(float(sys.argv[1]) if sys.argv[1:] else 0.1)
-            # I clear the terminal after the run
+            # Add a `time.sleep` to delay the frames or else it will be too fast
+            sleep(DELAY)
+            # Clear the terminal after the run
             clear()
     except KeyboardInterrupt:
         print("Stopped!")
+
 
 if __name__ == "__main__":
     print_heli()
